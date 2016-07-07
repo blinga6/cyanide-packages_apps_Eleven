@@ -176,7 +176,12 @@ public class BitmapWithColors {
             return;
         }
 
-        final Palette p = Palette.from(mBitmap).generate();
+        final Palette p = Palette.from(mBitmap)
+                .clearTargets()
+                .addTarget(Target.VIBRANT)
+                .addTarget(Target.LIGHT_VIBRANT)
+                .addTarget(Target.DARK_VIBRANT)
+                .generate();
         if (p == null) {
             return;
         }
