@@ -202,7 +202,7 @@ public class HomeActivity extends SlidingPanelActivity implements
                 @Override
                 protected void onPostExecute(BitmapWithColors bmc) {
                     updateVisualizerColor(bmc != null
-                            ? bmc.getContrastingColor() : Color.TRANSPARENT);
+                            ? bmc.getVibrantColor() : Color.TRANSPARENT);
                     updateStatusBarColor(bmc != null
                             ? bmc.getVibrantDarkColor() : Color.TRANSPARENT);
                 }
